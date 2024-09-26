@@ -1,16 +1,15 @@
-def month_comparator(month)
+angle = gets.chomp.to_f
 
-    name = nil
-    case month.to_i
-        when 1 then puts 'JANEIRO'
-        when 2 then puts'FEVEREIRO'
-        when 3 then puts 'MARÇO'
+if angle < 90
+    puts 'angulo agudo'
+elsif angle == 90
+    puts 'angulo reto'
+elsif angle > 90
+    if angle == 180
+        puts 'angulo raso'
+    else
+        puts 'angulo obtuso'
     end
-    return name
 end
 
-while true
-    puts "Escreva um mês"; month_input = gets.chomp
-    month = month_comparator(month_input)
-    print month
-end 
+
